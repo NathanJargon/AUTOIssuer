@@ -1,20 +1,22 @@
 # AUTOIssuer :octocat:
 
-This repository contains a Python script that automates the process of creating and closing issues in a GitHub repository using the GitHub API.
+
+░█████╗░██╗░░░██╗████████╗░█████╗░██╗░██████╗░██████╗██╗░░░██╗███████╗██████╗░
+██╔══██╗██║░░░██║╚══██╔══╝██╔══██╗██║██╔════╝██╔════╝██║░░░██║██╔════╝██╔══██╗
+███████║██║░░░██║░░░██║░░░██║░░██║██║╚█████╗░╚█████╗░██║░░░██║█████╗░░██████╔╝
+██╔══██║██║░░░██║░░░██║░░░██║░░██║██║░╚═══██╗░╚═══██╗██║░░░██║██╔══╝░░██╔══██╗
+██║░░██║╚██████╔╝░░░██║░░░╚█████╔╝██║██████╔╝██████╔╝╚██████╔╝███████╗██║░░██║
+╚═╝░░╚═╝░╚═════╝░░░░╚═╝░░░░╚════╝░╚═╝╚═════╝░╚═════╝░░╚═════╝░╚══════╝╚═╝░░╚═╝
+
+This repository contains a Python script that automates the process of creating and closing issues in a GitHub repository using the GitHub API.                                                       
 
 
-
- ░▒▓███████▓▒░▒▓█▓▒░░▒▓█▓▒░▒▓███████▓▒░ ░▒▓██████▓▒░ ░▒▓██████▓▒░░▒▓█▓▒░░▒▓█▓▒░▒▓███████▓▒░░▒▓█▓▒░▒▓███████▓▒░ ░▒▓██████▓▒░  
-░▒▓█▓▒░      ░▒▓█▓▒░░▒▓█▓▒░▒▓█▓▒░░▒▓█▓▒░▒▓█▓▒░░▒▓█▓▒░▒▓█▓▒░░▒▓█▓▒░▒▓█▓▒░░▒▓█▓▒░▒▓█▓▒░░▒▓█▓▒░▒▓█▓▒░▒▓█▓▒░░▒▓█▓▒░▒▓█▓▒░░▒▓█▓▒░ 
-░▒▓█▓▒░      ░▒▓█▓▒░░▒▓█▓▒░▒▓█▓▒░░▒▓█▓▒░▒▓█▓▒░░▒▓█▓▒░▒▓█▓▒░      ░▒▓█▓▒░░▒▓█▓▒░▒▓█▓▒░░▒▓█▓▒░▒▓█▓▒░▒▓█▓▒░░▒▓█▓▒░▒▓█▓▒░░▒▓█▓▒░ 
- ░▒▓██████▓▒░ ░▒▓██████▓▒░░▒▓█▓▒░░▒▓█▓▒░▒▓█▓▒░░▒▓█▓▒░▒▓█▓▒░      ░▒▓████████▓▒░▒▓███████▓▒░░▒▓█▓▒░▒▓█▓▒░░▒▓█▓▒░▒▓████████▓▒░ 
-       ░▒▓█▓▒░  ░▒▓█▓▒░   ░▒▓█▓▒░░▒▓█▓▒░▒▓█▓▒░░▒▓█▓▒░▒▓█▓▒░      ░▒▓█▓▒░░▒▓█▓▒░▒▓█▓▒░░▒▓█▓▒░▒▓█▓▒░▒▓█▓▒░░▒▓█▓▒░▒▓█▓▒░░▒▓█▓▒░ 
-       ░▒▓█▓▒░  ░▒▓█▓▒░   ░▒▓█▓▒░░▒▓█▓▒░▒▓█▓▒░░▒▓█▓▒░▒▓█▓▒░░▒▓█▓▒░▒▓█▓▒░░▒▓█▓▒░▒▓█▓▒░░▒▓█▓▒░▒▓█▓▒░▒▓█▓▒░░▒▓█▓▒░▒▓█▓▒░░▒▓█▓▒░ 
-░▒▓███████▓▒░   ░▒▓█▓▒░   ░▒▓█▓▒░░▒▓█▓▒░░▒▓██████▓▒░ ░▒▓██████▓▒░░▒▓█▓▒░░▒▓█▓▒░▒▓█▓▒░░▒▓█▓▒░▒▓█▓▒░▒▓█▓▒░░▒▓█▓▒░▒▓█▓▒░░▒▓█▓▒░ 
-                                                                                                                             
-   ____  __ __  _____  ____  _   ____   ____  __ __  ____ _____ 
-  / () \|  |  ||_   _|/ () \| | (_ (_` (_ (_`|  |  || ===|| () )
- /__/\__\\___/   |_|  \____/|_|.__)__).__)__) \___/ |____||_|\_\                                                                   
+███╗░░██╗░█████╗░████████╗██╗░░██╗░█████╗░███╗░░██╗░░░░░██╗░█████╗░██████╗░░██████╗░░█████╗░███╗░░██╗
+████╗░██║██╔══██╗╚══██╔══╝██║░░██║██╔══██╗████╗░██║░░░░░██║██╔══██╗██╔══██╗██╔════╝░██╔══██╗████╗░██║
+██╔██╗██║███████║░░░██║░░░███████║███████║██╔██╗██║░░░░░██║███████║██████╔╝██║░░██╗░██║░░██║██╔██╗██║
+██║╚████║██╔══██║░░░██║░░░██╔══██║██╔══██║██║╚████║██╗░░██║██╔══██║██╔══██╗██║░░╚██╗██║░░██║██║╚████║
+██║░╚███║██║░░██║░░░██║░░░██║░░██║██║░░██║██║░╚███║╚█████╔╝██║░░██║██║░░██║╚██████╔╝╚█████╔╝██║░╚███║
+╚═╝░░╚══╝╚═╝░░╚═╝░░░╚═╝░░░╚═╝░░╚═╝╚═╝░░╚═╝╚═╝░░╚══╝░╚════╝░╚═╝░░╚═╝╚═╝░░╚═╝░╚═════╝░░╚════╝░╚═╝░░╚══╝
 
 ## :gear: Setup & Usage
 
@@ -27,35 +29,35 @@ This repository contains a Python script that automates the process of creating 
 
 1. Clone this repository and navigate into it:
 
-    ```bash
-    git clone https://github.com/your_username/AUTOIssuer.git
-    cd AUTOIssuer
-    ```
+```bash
+git clone https://github.com/your_username/AUTOIssuer.git
+cd AUTOIssuer
+```
 2. Install the required Python packages:
 
-    ```bash
-    pip install python-dotenv requests
-    ```
-
+```bash
+pip install python-dotenv requests
+```
+    
 ### Configuration
 
 Create a `.env` file in the root directory of the project and add the following environment variables:
 
-    ```env
-    REPO_OWNER=your_username
-    REPO_NAME=your_repository
-    ISSUE_TITLE=Your Issue Title
-    ISSUE_BODY=Description of your issue
-    GITHUB_TOKEN=your_personal_access_token
-    ```
+```bash
+REPO_OWNER=your_username
+REPO_NAME=your_repository
+ISSUE_TITLE=Your Issue Title
+ISSUE_BODY=Description of your issue
+GITHUB_TOKEN=your_personal_access_token
+```
 
 ### Running the Script
 
 Execute the script using Python:
 
-    ```bash
-    python script.py
-    ```
+```bash
+python script.py
+```
 
 ## :warning: Warning
 
