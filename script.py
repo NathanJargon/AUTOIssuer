@@ -48,5 +48,6 @@ issue_title = os.getenv('ISSUE_TITLE')
 issue_body = os.getenv('ISSUE_BODY')
 github_token = os.getenv('GITHUB_TOKEN')
 
-create_github_issue(repo_owner, repo_name, issue_title, issue_body, github_token)
+for i in range(5):
+    create_github_issue(repo_owner, repo_name, f'Issue {i+1}', f'Body of Issue {i+1}', github_token)
 close_all_issues(repo_owner, repo_name, github_token)
